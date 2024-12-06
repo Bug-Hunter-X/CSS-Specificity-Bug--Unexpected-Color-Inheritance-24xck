@@ -1,0 +1,14 @@
+The following CSS code snippet causes unexpected behavior in some browsers due to specificity issues:
+
+```css
+div p {
+  color: blue;
+}
+p {
+  color: red;
+}
+```
+
+The `p` element within a `div` should ideally be blue, but due to the order of declaration, the second rule (more specific) overrides the first, resulting in red text.
+
+This problem becomes more complex and harder to debug in larger stylesheets.
