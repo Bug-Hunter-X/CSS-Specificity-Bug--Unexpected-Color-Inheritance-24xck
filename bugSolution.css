@@ -1,0 +1,12 @@
+The solution involves adjusting the CSS specificity to ensure the desired behavior:
+
+```css
+p {
+  color: red;
+}
+div p {
+  color: blue;
+}
+```
+
+By placing the more specific rule (`div p`) after the less specific rule (`p`), we ensure the browser correctly applies the blue color to the paragraph within the div.  Alternatively, we could increase the specificity of `div p` by adding extra selectors or using the `!important` flag, but this is generally considered less maintainable.
